@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kachi Care Solutions – Compassionate Home Care & Training</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary:     #3a7ca5;
+      --primary-dark:#2c5f85;
+      --light-bg:   #f9fafb;
+      --gray:       #6b7280;
+      --dark:       #111827;
+      --border:     #e5e7eb;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--dark);
+      background-color: var(--light-bg);
+      line-height: 1.65;
+    }
+
+    .navbar {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 1.1rem 0;
+    }
+
+    .navbar-brand img {
+      height: 78px;
+      width: auto;
+      /* Removed shadow from logo */
+    }
+
+    .nav-link {
+      font-weight: 500;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary);
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+                  url('backgroundimage.jpeg') center/cover no-repeat;
+      color: white;
+      padding: 11rem 0 8rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.4rem;
+      font-weight: 700;
+      margin-bottom: 1.4rem;
+      line-height: 1.15;
+    }
+
+    .hero p.lead {
+      font-size: 1.4rem;
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      opacity: 0.95;
+    }
+
+    .btn-custom {
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.25s;
+    }
+
+    .btn-primary-custom {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .btn-primary-custom:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-primary-custom {
+      border-color: white;
+      color: white;
+    }
+
+    .btn-outline-primary-custom:hover {
+      background: white;
+      color: var(--primary-dark);
+    }
+
+    section {
+      padding: 7rem 0;
+    }
+
+    h2.section-title {
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2.section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 4px;
+    }
+
+    .service-card, .team-card {
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      background: white;
+    }
+
+    .service-card:hover, .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+
+    .service-img, .team-img {
+      height: 220px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .team-img {
+      height: 280px; /* Taller for portraits */
+    }
+
+    .footer {
+      background: var(--dark);
+      color: #e5e7eb;
+      padding: 5rem 0 3rem;
+    }
+
+    .footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    @media (max-width: 767.98px) {
+      .hero { padding: 8rem 0 6rem; }
+      .hero h1 { font-size: 2.6rem; }
+      .hero p.lead { font-size: 1.2rem; }
+      h2.section-title { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="logo1.jpeg" alt="Kachi Care Solutions Logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3 fw-medium" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 fw-medium" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 fw-medium" href="#training">Training</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 fw-medium" href="#team">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 fw-medium" href="https://wa.me/2349138450747">Contact Us</a></li>
+
+
+                    <li class="nav-item ms-lg-3">
+                        <a href="https://wa.me/2349138450747" class="btn btn-primary rounded-pill px-4 fw-bold shadow-sm">
+                            <i class="fab fa-whatsapp me-2"></i>Book Care
+                        </a>
+                    </li>
+                </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <h1>Kachi Care Solutions</h1>
+    <p class="lead">
+      Professional home healthcare services and healthcare assistant training — delivering compassionate care and preparing individuals for meaningful careers in healthcare.
+    </p>
+    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 gap-sm-4">
+      <a href="https://wa.me/2349138450747" class="btn btn-primary-custom btn-custom btn-lg">Book a Caregiver</a>
+      <a href="https://wa.me/2349138450747" class="btn btn-outline-primary-custom btn-custom btn-lg">Enroll in Training</a>
+      <a href="https://wa.me/2349138450747" class="btn btn-outline-primary-custom btn-custom btn-lg">Book A Consultation</a>
+
+    </div>
+  </div>
+</section>
+
+<section id="about" class="bg-white py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">About Kachi Care Solutions</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <p class="lead text-center mb-4">
+          Kachi Care Solutions is a healthcare support organization dedicated to improving lives through professional caregiving services, healthcare assistant training, and community health initiatives.
+        </p>
+        <p class="text-center fs-5 mb-5">
+          We provide compassionate home care services for individuals and families while also training aspiring healthcare assistants with the knowledge and practical skills needed to succeed in healthcare environments.
+        </p>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Our Services</h2>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card h-100">
+          <img src="personalcare.jpeg" class="service-img" alt="Personal Care Assistance">
+          <div class="card-body p-4 text-center">
+            <h5 class="card-title fw-semibold">Personal Care Assistance</h5>
+            <p class="text-muted small">Support with daily hygiene and personal care such as bathing, grooming, dressing, and toileting while preserving dignity and comfort.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card h-100">
+          <img src="mobilitysupport.jpeg" class="service-img" alt="Mobility Support">
+          <div class="card-body p-4 text-center">
+            <h5 class="card-title fw-semibold">Mobility Support</h5>
+            <p class="text-muted small">Assistance with walking, transferring, and repositioning to help prevent falls and improve comfort.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card h-100">
+          <img src="medicationreminder.jpeg" class="service-img" alt="Medication Reminder">
+          <div class="card-body p-4 text-center">
+            <h5 class="card-title fw-semibold">Medication Reminder</h5>
+            <p class="text-muted small">Caregivers assist clients in remembering their medication schedules as prescribed by healthcare professionals.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card h-100">
+          <img src="posthospital.jpeg" class="service-img" alt="Post Hospital Recovery Care">
+          <div class="card-body p-4 text-center">
+            <h5 class="card-title fw-semibold">Post Hospital Recovery Care</h5>
+            <p class="text-muted small">Support for patients recovering from surgery, illness, or hospital discharge to ensure comfort and safety at home.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card h-100">
+          <img src="elderlycare.jpeg" class="service-img" alt="Elderly Care and Companionship">
+          <div class="card-body p-4 text-center">
+            <h5 class="card-title fw-semibold">Elderly Care and Companionship</h5>
+            <p class="text-muted small">Compassionate support and companionship for elderly individuals, helping them maintain emotional wellbeing and independence.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card h-100">
+          <img src="basichealth.jpeg" class="service-img" alt="Basic Health Monitoring">
+          <div class="card-body p-4 text-center">
+            <h5 class="card-title fw-semibold">Basic Health Monitoring</h5>
+            <p class="text-muted small">Routine observation of vital signs and overall health status, with communication to families when necessary.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card h-100">
+          <img src="nannyandchildhood.jpeg" class="service-img" alt="Nanny Services for Working Families">
+          <div class="card-body p-4 text-center">
+            <h5 class="card-title fw-semibold">Nanny Services for Working Families</h5>
+            <p class="text-muted small">Reliable childcare support for working class families who need trusted caregivers to assist with their children.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card h-100">
+          <img src="specialneedswithdisability.jpeg" class="service-img" alt="Special Needs Care">
+          <div class="card-body p-4 text-center">
+            <h5 class="card-title fw-semibold">Special Needs Care With disability</h5>
+            <p class="text-muted small">Professional support for individuals living with developmental or physical disabilities.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card h-100">
+          <img src="specialneeds.jpeg" class="service-img" alt="Care for Special Needs Children">
+          <div class="card-body p-4 text-center">
+            <h5 class="card-title fw-semibold">Care for Special Needs Children</h5>
+            <p class="text-muted small">Compassionate and attentive care designed to support children with special care requirements.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card h-100">
+          <img src="palliativesupport.jpeg" class="service-img" alt="Palliative Care Support">
+          <div class="card-body p-4 text-center">
+            <h5 class="card-title fw-semibold">Palliative Care Support</h5>
+            <p class="text-muted small">Comfort focused care for individuals with serious or life limiting illnesses, ensuring dignity, compassion, and emotional support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="training" class="bg-white">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Healthcare Assistant and Caregiver Training Program</h2>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <p class="lead text-center mb-4">
+          Start Your Career in Healthcare
+        </p>
+        <p class="text-center mb-5">
+          The Kachi Care Solutions Healthcare Assistant and Caregiver Training Program prepares individuals to become competent healthcare support professionals.
+        </p>
+
+        <div class="row g-4 text-center">
+          <div class="col-md-4">
+            <div class="p-4 border rounded-4 bg-light">
+              <h5>Program Duration</h5>
+              <p class="fs-4 fw-bold">3 Months</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 border rounded-4 bg-light">
+              <h5>Total Training Hours</h5>
+              <p class="fs-4 fw-bold">150 Hours</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 border rounded-4 bg-light">
+              <h5>Format</h5>
+              <p class="fs-5">Classroom • Practical • Hands-on • Mentorship</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <h4 class="text-center mb-4">What You Will Learn</h4>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Basic nursing care & vital signs monitoring</li>
+                <li class="list-group-item">Patient hygiene, mobility & infection control</li>
+                <li class="list-group-item">Communication, ethics & patient dignity</li>
+                <li class="list-group-item">Safeguarding vulnerable adults & children</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Elderly care, dementia & palliative principles</li>
+                <li class="list-group-item">CPR, Basic Life Support & First Aid</li>
+                <li class="list-group-item">Nutrition support & safe feeding techniques</li>
+                <li class="list-group-item">Emotional support & patient comfort</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <h5>Certification & Career Support</h5>
+            <p class="mt-3">
+              Kachi Care Solutions Certificate • Recommendation Letter • Transcript<br>
+              Interview coaching • Career mentorship • Job search assistance
+            </p>
+            <div class="alert alert-info d-inline-block px-4 py-3 rounded-4 mb-4">
+              <strong>Training Venue:</strong> Toptee Medical Center, Surulere Lagos
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+              <a href="https://wa.me/2349138450747" class="btn btn-primary-custom btn-custom">Enroll Now</a>
+              <a href="https://wa.me/2349138450747" class="btn btn-outline-primary btn-custom" style="border-radius: 50px; font-weight: 600;">Book a Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="team" class="bg-light py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Our Team</h2>
+    <div class="row g-4 justify-content-center">
+<style>
+  .team-card-premium {
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+  }
+
+  .team-card-premium:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border-color: #0d6efd;
+  }
+
+  /* Ensures the image is fully visible and high-impact */
+  .img-container {
+    width: 100%;
+    height: 320px; /* Increased height for better visibility */
+    overflow: hidden;
+    position: relative;
+    background-color: #f8f9fa;
+  }
+
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Change to 'contain' if you want to see the literal edges of the file */
+    object-position: top;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .team-card-premium:hover .img-container img {
+    transform: scale(1.03);
+  }
+
+  .content-overlay {
+    padding: 1.5rem;
+  }
+
+  .role-badge {
+    display: inline-block;
+    background-color: #e7f1ff;
+    color: #0d6efd;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .bio-scroll {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: #6c757d;
+  }
+
+  .collapse.show + .bio-scroll, 
+  .collapsing + .bio-scroll {
+    max-height: 500px;
+  }
+</style>
+
+<div class="col-md-6 col-lg-4 mb-4">
+  <div class="team-card-premium h-100 shadow-sm">
+    <div class="img-container">
+      <img src="onyekachi.jpeg" alt="Onyekachi Emeribe" loading="lazy">
+    </div>
+
+    <div class="content-overlay">
+      <div class="text-center mb-3">
+        <span class="role-badge">Founder & Director</span>
+        <h4 class="fw-bold text-dark mb-1">Onyekachi Emeribe</h4>
+        <p class="text-muted small fw-medium">RN, BNSc</p>
+      </div>
+
+      <p class="text-secondary small text-center px-2 mb-3">
+        <em>Seasoned Nurse with over 15 years of experience in clinical practice and healthcare leadership.</em>
+      </p>
+
+      <div class="collapse" id="fullBio">
+        <div class="pt-3 border-top mt-3">
+          <p class="small text-muted mb-2">
+            She trained at the College of Nursing, Ihiala, Anambra State, earned a Bachelor of Nursing Science from Ahmadu Bello University, and completed Hospital Management studies at the Federal College of Education, Akoka, Lagos State.
+          </p>
+          <p class="small text-muted mb-2">
+            She has held key leadership roles including Head Nurse, Matron, Project Supervisor, and Chief Nursing Officer at X-serve Children’s Hospital. She also completed professional training in Global Mental Health at the University of Washington, D.C., USA.
+          </p>
+          <p class="small text-muted mb-0">
+            Dedicated to improving healthcare delivery through compassionate home care services and the development of competent healthcare assistants.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <button class="btn btn-primary btn-sm px-4 rounded-pill fw-bold" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#fullBio" 
+                aria-expanded="false"
+                style="font-size: 0.7rem;">
+          VIEW FULL PROFILE
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="team-card h-100 shadow-sm bg-white p-3 border-0">
+          <img src="osondu.jpeg" class="team-img rounded mb-3 w-100" alt="Dr. Osondu Christabel Ngozi">
+          <div class="card-body text-center">
+            <h5 class="fw-bold mb-1">Dr. Osondu Christabel Ngozi</h5>
+            <p class="text-primary small fw-bold mb-2">Medical Advisor & Clinical Educator</p>
+            <p class="text-muted small">A Russia-trained medical doctor with extensive clinical experience and leadership expertise.</p>
+
+            <div class="collapse" id="bioOsondu">
+              <p class="text-muted small">
+                Dr. Osondu has served as Chief Medical Officer and is a licensed medical doctor with the UK medical regulatory body. At Kachi Care Solutions, she provides clinical guidance and supports outreach programs.
+              </p>
+            </div>
+            <button class="btn btn-outline-primary btn-sm mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#bioOsondu" aria-expanded="false">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="team-card h-100 shadow-sm bg-white p-3 border-0">
+          <img src="precios.jpeg" class="team-img rounded mb-3 w-100" alt="Precious Igwe">
+          <div class="card-body text-center">
+            <h5 class="fw-bold mb-1">Scientist Precious Igwe</h5>
+            <p class="text-primary small fw-bold mb-2">Laboratory Scientist & Training Facilitator</p>
+            <p class="text-muted small">Qualified Medical Laboratory Scientist and a graduate of Imo State University (IMSU).</p>
+
+            <div class="collapse" id="bioPrecious">
+              <p class="text-muted small">
+                With years of experience at organizations like LUTH and X-serve, she supports Kachi Care Solutions students in clinical laboratory science and practical training.
+              </p>
+            </div>
+            <button class="btn btn-outline-primary btn-sm mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#bioPrecious" aria-expanded="false">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="team-card h-100 shadow-sm bg-white p-3 border-0">
+          <img src="lola.jpeg" class="team-img rounded mb-3 w-100" alt="Lola Arifalo">
+          <div class="card-body text-center">
+            <h5 class="fw-bold mb-1">Nurse Lola Arifalo</h5>
+            <p class="text-primary small fw-bold mb-2">Lead Nursing Trainer</p>
+            <p class="text-muted small">Registered Nurse and Midwife (BNSC) with a focus on core nursing and caregiving excellence.</p>
+
+            <div class="collapse" id="bioLola">
+              <p class="text-muted small">
+                She brings strong practical knowledge from various healthcare settings, guiding students through clinical practices and compassionate care standards.
+              </p>
+            </div>
+            <button class="btn btn-outline-primary btn-sm mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#bioLola" aria-expanded="false">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="team-card h-100 shadow-sm bg-white p-3 border-0">
+          <img src="logo1.jpeg" class="team-img rounded mb-3 w-100" alt="Faith Agboma">
+          <div class="card-body text-center">
+            <h5 class="fw-bold mb-1">Faith Agboma</h5>
+            <p class="text-primary small fw-bold mb-2">HR & Administrative Manager</p>
+            <p class="text-muted small">Trained healthcare administrator and graduate of the Institute of Professional Certifications.</p>
+
+            <div class="collapse" id="bioFaith">
+              <p class="text-muted small">
+                Faith manages daily administrative operations, leads organizational communications, and oversees human resources for the team.
+              </p>
+            </div>
+            <button class="btn btn-outline-primary btn-sm mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#bioFaith" aria-expanded="false">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-white">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Why Choose Kachi Care Solutions</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded-4 bg-light text-center">
+          <h5>Professional Training</h5>
+          <p class="text-muted">Comprehensive curriculum with life-saving skills (CPR/First Aid)</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded-4 bg-light text-center">
+          <h5>Hands-on Practical Training</h5>
+          <p class="text-muted">Real-world exposure under experienced mentors</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded-4 bg-light text-center">
+          <h5>Career Support</h5>
+          <p class="text-muted">Recommendation letters, interview prep & job guidance</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded-4 bg-light text-center">
+          <h5>Compassionate Caregivers</h5>
+          <p class="text-muted">Trained with focus on dignity, safety & empathy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Community Outreach & Social Responsibility</h2>
+
+    <div class="row g-5">
+      <div class="col-lg-6">
+        <h4>Medical Outreach for the Elderly</h4>
+        <p>We organize free health screening programs across Nigeria including:</p>
+        <ul>
+          <li>Free blood pressure checks</li>
+          <li>Free HIV, hepatitis, blood glucose & syphilis screening</li>
+          <li>Free consultation + refreshments</li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <h4>Support for Children Living with Disabilities</h4>
+        <p>We visit special schools and centers to:</p>
+        <ul>
+          <li>Provide encouragement and care items</li>
+          <li>Promote inclusion and compassion</li>
+          <li>Engage through supportive activities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+   <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
+              <video controls poster="logo.jpeg">
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+</section>
+
+<section id="contact" class="bg-dark text-white py-5">
+  <div class="container text-center py-4">
+    <h2 class="mb-4">Contact Us</h2>
+    <p class="lead mb-4">
+      We’re here to help. Reach out today for caregiving services or training enrollment.
+    </p>
+
+    <div class="row justify-content-center g-4 mb-5">
+      <div class="col-auto">
+        <p class="mb-1"><strong>WhatsApp:</strong><br>
+          <a href="https://wa.me/2349138450747" class="text-white">09138450747</a>
+        </p>
+         <p class="mb-1"><strong>Phone:</strong><br>
+          <a href="tel:07060654202" class="text-white">07060654202</a>
+        </p>
+
+      </div>
+      <div class="col-auto">
+        <p class="mb-1"><strong>Email:</strong><br>
+          <a href="mailto:kachisolutions@gmail.com" class="text-white">kachisolutions@gmail.com</a>
+        </p>
+      </div>
+      <div class="col-auto">
+        <p class="mb-1"><strong>Office:</strong><br>
+          46 Ogunlana drive, Surulere, Lagos
+        </p>
+      </div>
+       <div class="col-auto">
+        <p class="mb-1"><strong>RC NUMBER:</strong><br>
+          8765200
+        </p>
+      </div>
+    </div>
+
+    <small class="opacity-75">© 2026 Kachi Care Solutions. All rights reserved.</small>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
